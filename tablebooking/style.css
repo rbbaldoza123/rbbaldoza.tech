@@ -1,0 +1,251 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: "Tagesschrift", system-ui;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* Form in a Box and rounded corners*/
+.form-container {
+    margin: 50px auto;
+    background-color: #d2d2d29f; /* White background for the box */
+    padding: 30px; /* Space inside the box */
+    border-radius: 50px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgb(0, 0, 0); /* Soft shadow for a floating effect */
+    max-width: 450px; /* Optional: Max width of the form */
+    margin: 30px auto; /* Center the form container on the page */
+    margin-top: 50px;
+    border: 1px solid #ddd; /* Light gray border */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+    scroll-behavior: smooth;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.btn-dark {
+    background-color: #cb2601;
+    border-radius: 50px;
+    opacity: 0.8;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+.btn-dark:hover {
+    background-color: #cb2601;
+    border-radius: 50px;
+    transform: scale(1.1);
+    opacity: 1;   
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+
+.form-control {
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    transition: 0.3s;
+}
+
+.form-control:hover {
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    transform: scale(1.03);
+}
+
+.max {
+    font-size: .9em;
+    font-weight: 400;
+}
+
+.button-wrapper {
+    text-align: center;
+}
+
+.mb-2 {
+    color: #cb2601;
+    text-align: center;
+}
+
+/* bg animation */
+.bg-animate {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("booking\ img/bgred.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+    animation: zoomFadeIn 1.5s ease-out forwards;
+  }
+
+  @keyframes zoomFadeIn {
+    0% {
+      transform: scale(1.05);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+/* header and links */
+.site-header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #B4182D;
+  color: #fda481;
+  opacity: 0;
+  animation: fadeIn .5s ease-out forwards;
+  transform: translateY(-50px);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.brand-name {
+  font-size: 30px;
+}
+
+.header-left h1 {
+  margin: 0;
+}
+
+.header-right nav a {
+  color: #fda481;
+  margin-left: 15px;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.header-right nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #37415c;
+  transition: width 0.3s ease;
+}
+
+.header-right nav a:hover {
+  color: #ffffff; /* optional highlight color */
+}
+
+.header-right nav a:hover::after {
+  width: 100%;
+}
+
+.logo {
+  height: 70px; /* or whatever height fits your design */
+  width: auto;
+}
+
+/* footer */
+.site-footer {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  background: #B4182D;
+  color: #fda481;
+  margin-top: auto;
+  justify-content: center;
+  overflow-wrap: break-word;
+  opacity: 0;
+  animation: fadefooter 1.5s ease-out forwards;
+  transform: translateY(50px);
+}
+
+@keyframes fadefooter {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.page-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+}
+
+.cha {
+
+  padding: 10px 40px 20px 40px;
+  text-align: center;
+  text-decoration:  2px ;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.footer-icons {
+  margin-top: 10px;
+}
+
+.footer-icons a {
+  color: rgb(0, 0, 0);
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: transform 1s ease;
+  align-items: center;
+}
+
+.footer-icons a:hover {
+  color: #ffffff; /* optional: gold hover */
+}
+
+.inf {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* media queries */
+@media only screen and (max-width: 600px) {
+  .form-container {
+    max-width: 300px;
+    margin-top: 30px;
+  }
+
+  .form-control {
+    font-size: 10px;
+  }
+
+  .site-header {
+    font-size: 10px;
+  }
+
+.brand-name {
+  font-size: 20px;
+}
+
+.logo {
+  height: 50px;
+}
+
+  .cha {
+    font-size: 15px;
+  }
+}

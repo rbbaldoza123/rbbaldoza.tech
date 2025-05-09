@@ -1,0 +1,315 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: "Tagesschrift", system-ui;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fda481;
+}
+
+.site-header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #B4182D;
+    color: #fda481;
+    opacity: 0;
+    animation: fadeInheader .5s ease-out forwards;
+    transform: translateY(-50px);
+  }
+  
+  @keyframes fadeInheader {
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  .brand-name {
+    font-size: 30px;
+  }
+  
+  .header-left h1 {
+    margin: 0;
+  }
+  
+  .header-right nav a {
+    color: #fda481;
+    margin-left: 15px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .header-right nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #37415c;
+    transition: width 0.3s ease;
+  }
+  
+  .header-right nav a:hover {
+    color: #ffffff; /* optional highlight color */
+  }
+  
+  .header-right nav a:hover::after {
+    width: 100%;
+  }
+  
+  .logo {
+    height: 70px; /* or whatever height fits your design */
+    width: auto;
+  }
+  
+/* footer */
+.site-footer {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    background: #B4182D;
+    color: #fda481;
+    margin-top: auto;
+    justify-content: center;
+    overflow-wrap: break-word;
+    opacity: 0;
+    animation: fadefooter 1.5s ease-out forwards;
+    transform: translateY(50px);
+  }
+  
+  @keyframes fadefooter {
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  .page-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 45px;
+  }
+  
+  .cha {
+  
+    padding: 10px 40px 20px 40px;
+    text-align: center;
+    text-decoration:  2px ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .footer-icons {
+    margin-top: 10px;
+  }
+  
+  .footer-icons a {
+    color: rgb(0, 0, 0);
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 1s ease;
+    align-items: center;
+  }
+  
+  .footer-icons a:hover {
+    color: #ffffff; /* optional: gold hover */
+  }
+  
+  .inf {
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+
+  /* main */
+
+  .plate-section {
+      position: relative;
+      background: linear-gradient(145deg, #B4182D, #fda481);
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      animation: fademenu 1.5s ease-out forwards;
+      transform: translateY(50px);
+  }
+
+@keyframes fademenu {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+  .ha {
+    font-size: 30px;
+  }
+
+  .hat {
+    font-size: 60px;
+  }
+  
+  .rotating-plate {
+    width: 600px;
+    animation: rotate 10s linear infinite;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .card {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  .menu-section {
+    background: linear-gradient(90deg, #B4182D, #fda481);
+    position: relative;
+    background-image: url("menuimg/bg1.jpg");
+    background-size: cover;
+    opacity: 0;
+  animation: fademenu 2.5s ease-out forwards;
+  transform: translateY(50px);
+}
+
+@keyframes fademenu {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+  
+  
+  .menu-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.08;
+    background-repeat: repeat;
+    z-index: 0;
+  }
+  
+  .menu-section .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .btn-dark {
+    background-color: #B4182D;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-dark:hover {
+    background-color: #771421;
+    color: #fff;
+  }
+
+  .head {
+    text-align: center;
+    opacity: 0;
+  animation: fadehead 2s ease-out forwards;
+  transform: translateY(50px);
+}
+
+@keyframes fadehead {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+  .boom {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+  }
+
+  .boom1 {
+    text-align: center;
+    font-family: "Comic Relief", system-ui;
+    font-size: 30px;
+  }
+
+  .card-body {
+    height:150px;
+  }
+
+/* media queries */
+@media only screen and (max-width: 600px) {
+.site-header {
+        font-size: 10px;
+    }
+
+    .brand-name {
+        font-size: 20px;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    .cha {
+        font-size: 15px;
+      }
+
+    .rotating-plate {
+        width: 270px;
+    }
+
+    .boom {
+        font-size: 30px;
+    }
+
+    .head {
+        font-size: 20px;
+    }
+
+    .ha {
+        font-size: 20px;
+      }
+    
+      .hat {
+        font-size: 35px;
+      }
+
+    .boom1 {
+        font-size: 23px;
+    }
+    
+
+}

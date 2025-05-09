@@ -1,0 +1,288 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: "Tagesschrift", system-ui;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #242e49;
+    text-align: justify;
+}
+
+.site-header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #B4182D;
+    color: #fda481;
+    opacity: 0;
+    animation: fadeIn .5s ease-out forwards;
+    transform: translateY(-50px);
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  .brand-name {
+    font-size: 30px;
+  }
+  
+  .header-left h1 {
+    margin: 0;
+  }
+  
+  .header-right nav a {
+    color: #fda481;
+    margin-left: 15px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .header-right nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #37415c;
+    transition: width 0.3s ease;
+  }
+  
+  .header-right nav a:hover {
+    color: #ffffff; /* optional highlight color */
+  }
+  
+  .header-right nav a:hover::after {
+    width: 100%;
+  }
+  
+  .logo {
+    height: 70px; /* or whatever height fits your design */
+    width: auto;
+  }
+
+/* footer */
+.site-footer {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    background: #B4182D;
+    color: #fda481;
+    margin-top: auto;
+    justify-content: center;
+    overflow-wrap: break-word;
+    opacity: 0;
+    animation: fadefooter 1.5s ease-out forwards;
+    transform: translateY(50px);
+  }
+  
+  @keyframes fadefooter {
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  .page-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 45px;
+  }
+  
+  .cha {
+  
+    padding: 10px 40px 20px 40px;
+    text-align: center;
+    text-decoration:  2px ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .footer-icons {
+    margin-top: 10px;
+  }
+  
+  .footer-icons a {
+    color: rgb(0, 0, 0);
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 1s ease;
+    align-items: center;
+  }
+  
+  .footer-icons a:hover {
+    color: #ffffff; /* optional: gold hover */
+  }
+  
+  .inf {
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+.boom {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    color: #181a2f;
+}
+
+/* bg animation */
+.bg-animate {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("aboutimg/redwater.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+    animation: zoomFadeIn 1.5s ease-out forwards;
+  }
+
+  @keyframes zoomFadeIn {
+    0% {
+      transform: scale(1.05);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+.boom1 {
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.15); /* White background for the box */
+    padding: 100px; /* Space inside the box */
+    padding-top: 40px;
+    padding-bottom: 40px;
+    backdrop-filter: blur(10px);
+    border-radius: 40px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgb(0, 0, 0); /* Soft shadow for a floating effect */
+    max-width: 95%; /* Optional: Max width of the form */
+    margin: 30px auto; /* Center the form container on the page */
+    margin-top: 20px;
+    border: 1px solid #ddd; /* Light gray border */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1.5s ease-out forwards;
+    scroll-behavior: smooth;
+    font-size: large;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+.carousel {
+    max-height: 500px;
+    overflow: hidden;  
+    opacity: 0;
+    animation: fade 1s ease-out forwards;
+    transform: translateY(30px); 
+    scroll-behavior: smooth;
+}
+
+@keyframes fade {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.card-title {
+    color: #54162b;
+    font-size: large;
+}
+
+.card-text {
+    font-family: "Comic Relief", system-ui;
+    font-size: large;
+}
+
+.badge {
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+}
+
+.mb-4 {
+    text-align: center;
+    font-size: large;
+}
+
+.wow {
+    font-weight: 700;
+    color: #121e3f;
+    font-size: large;
+}
+
+.boom2 {
+    font-family: "Comic Relief", system-ui;
+    font-size: large;
+}
+
+.col-12 {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  margin: 0;
+}
+
+/* media queries */
+@media only screen and (max-width: 600px) {
+.site-header {
+        font-size: 10px;
+    }
+
+    .brand-name {
+        font-size: 20px;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    .cha {
+        font-size: 15px;
+      }
+    
+    .boom1 {
+        max-width: 90%;
+        font-size: 12px;
+        padding: 30px;
+    }
+
+    .boom {
+        font-size: 30px;
+    }
+
+    .card-title {
+        font-size: medium;
+    }
+
+    .col-12 {
+      display: table;
+    }
+
+    .note {
+      text-align: justify;
+    }
+}
